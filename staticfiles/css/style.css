@@ -1,0 +1,997 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Page transitions*/
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotateX(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+/* title transitions */
+span {
+    opacity: 0;
+}
+
+span.fadeout {
+    opacity: 1;
+    transition: all 1.2s ease;
+
+}
+
+/* Navbar styles */
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.center-nav {
+    display: flex;
+}
+
+.nav-wrapper > .center-nav > div {
+    margin-right: 40px;
+    font-size: 0.9em;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 20px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-dropdown {
+    height: 20px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-dropdown-links {
+    height: 32px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-dropdown-link-wrapper a{
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-dropdown-links {
+    display: none;
+    padding-top: 12px;
+    background-color: white;
+}   
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-dropdown:hover{
+    border-bottom: 1px solid black;
+}
+
+.nav-dropdown-links:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover{
+    color:black;
+}
+
+.nav-dropdown-link-wrapper a:hover{
+    color:black;
+}
+
+.nav-dropdown:hover .nav-dropdown-links{
+    display: block;
+}
+
+a.active {
+    border-bottom: 1px solid black;
+    color: black !important;
+}
+/* Home styles */
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-template-areas:
+    "header header"
+    "home-about-who home-about-where"
+    "footer footer";
+    animation: transitionIn 1.00s;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    color: white;
+    background: no-repeat center center fixed;
+    background-size: 100% 100%;
+    padding: 250px;
+    height: auto;
+}
+
+.header h1 {
+    font-size: 50px;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.header p {
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.about-container {
+    position: relative;
+}
+
+
+.about-container {
+    position: relative;
+    background: no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+
+.home-about-who {
+    grid-area: home-about-who;
+}
+
+.home-about-where {
+    grid-area: home-about-where;
+}
+
+.about-title {
+    color: white;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    font-family: 'Lato', serif;
+    text-align: center;
+    padding-top: 120px;
+    margin: 50px;
+}
+
+.about-title h2 {
+    font-size: 45px;
+}
+
+.about-content {
+    position: relative;
+    color: white;
+    font-family: 'Martel Sans', sans-serif, bold;
+    margin: 60px;
+    font-size: 20px;
+}
+
+/* Church styles */
+.church-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto auto auto auto auto;
+    grid-template-areas:
+    "church-title church-title"
+    "line-break line-break"
+    "jumbotron-1 jumbotron-1"
+    "church-info-1 church-info-3"
+    "jumbotron-2 jumbotron-2"
+    "church-info-2 church-info-4"
+    "footer footer";
+    animation: transitionIn 1.00s;
+}
+.church-title {
+    grid-area: church-title;
+    color: white;
+    position: relative;
+    background: no-repeat center center fixed;
+    background-size: 100% 100%;
+    padding: 110px;
+}
+
+.church-title h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.line-break {
+    grid-area: line-break;
+}
+
+.church-info-1 {
+    grid-area: church-info-1;
+}
+
+.church-info-2 {
+    grid-area: church-info-2;
+}
+
+.jumbotron-1 {
+    grid-area: jumbotron-1;
+    background-color: rgb(94, 90, 90);
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.jumbotron-1 .display-4 {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.jumbotron-1 p{
+    font-family: 'Martel Sans', sans-serif, bold;
+}
+
+.jumbotron-1 .btn{
+    color: white;
+}
+
+.jumbotron-2 {
+    grid-area: jumbotron-2;
+    background-color: rgb(3, 68, 109);
+    color: white;
+    text-align: center;
+    padding: 50px;
+}
+
+.jumbotron-2 .display-4 {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.jumbotron-2 p{
+    font-family: 'Martel Sans', sans-serif, bold;
+}
+
+.jumbotron-2 .btn{
+    color: white;
+}
+.btn {
+    border: 1px solid white;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.church-info-1 {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.church-info-1 p {
+    font-size: 20px;
+} 
+
+.church-info-2 {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.church-info-2 p {
+    font-size: 20px;
+} 
+
+.church-info-3 {
+    grid-area: church-info-3;
+}
+
+.church-info-3 {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.church-info-3 p {
+    font-size: 20px;
+} 
+.church-info-4 {
+    grid-area: church-info-4;
+}
+
+.church-info-4 {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.church-info-4 p {
+    font-size: 20px;
+} 
+/* Ministry styles */
+.ministry-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto auto auto auto auto;
+    grid-template-areas:
+    "ministry-title"
+    "gallery" 
+    "ministry-1-title"
+    "ministry-info-1"
+    "ministry-2-title"
+    "ministry-info-2"
+    "footer";
+    animation: transitionIn 1.00s;
+}
+.ministry-title {
+    grid-area: ministry-title;
+    color: white;
+    position: relative;
+    background: no-repeat center center fixed;
+    background-size: 100%;
+    padding: 110px;
+}
+
+.ministry-title h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    align-items: start;
+    justify-items: center;
+}
+
+.gallery img {
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+    max-width: 100%;
+}
+
+.gallery img:nth-child(6) {
+    grid-column: span 5;
+}
+
+.ministry-1-title {
+    grid-area: ministry-1-title;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #778899;
+    color: white;
+    font-family: 'Lato', serif;
+    padding: 50px;
+}
+
+.ministry-2-title {
+    grid-area: ministry-2-title;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #FFDAB9;
+    color: white;
+    font-family: 'Lato', serif;
+    padding: 50px;
+}
+.ministry-p {
+    font-family: 'Martel Sans', sans-serif, bold;
+    text-transform: initial;
+}
+
+.ministry-info-1 {
+    grid-area: ministry-info-1;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    padding: 50px;
+}
+
+.ministry-info-2 {
+    grid-area: ministry-info-2;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    padding: 50px;
+}
+
+.ministries .btn {
+    border: 1px solid white;
+    color: white;
+    font-family: 'Lato', serif;
+}
+
+.ministry-info-1 h3 {
+    font-size: 35px;
+    padding: 15px;
+}
+
+.ministry-info-1 p {
+    font-size: 20px;
+}
+
+.ministry-info-2 h3 {
+    font-size: 35px;
+    padding: 15px;
+}
+
+.ministry-info-2 p {
+    font-size: 20px;
+}
+/* Event styles */
+.event-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto auto auto;
+    grid-template-areas:
+    "event-title event-title event-title"
+    "event-calendar event-calendar event-calendar"
+    "content-title content-title content-title"
+    "event-content-1 event-content-2 event-content-3"
+    "footer footer footer";
+    animation: transitionIn 1.00s;
+}
+
+.event-title {
+    grid-area: event-title;
+    color: white;
+    text-align: center;
+    position: relative;
+    background: no-repeat center center fixed;
+    background-size: 100%;
+    padding: 110px;
+}
+
+.event-title h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.event-calendar {
+    grid-area: event-calendar;
+    text-align: center;
+}
+
+.content-title {
+    grid-area: content-title;
+}
+
+.event-content-1 {
+    grid-area: event-content-1;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.event-content-2 {
+    grid-area: event-content-2;
+    display: flex;
+    justify-content: center;
+}
+
+.event-content-3 {
+    grid-area: event-content-3;
+    display: flex;
+    justify-content: center;
+}
+
+.content-title {
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    font-size: 45px;
+    padding-top: 25px;
+}
+
+.card {
+    width: 400px;
+    height: 300px;
+    background-color: lightslategray;
+}
+
+.card-title {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+.card-subtitle {
+    font-family: 'Martel Sans', sans-serif, bold;
+    text-align: center;
+    padding-bottom: 8px;
+    color: white;
+}
+
+.card-text {
+    font-family: 'Martel Sans', sans-serif, bold;
+    color: white;
+}
+
+.card .btn {
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+/* Staff styles */
+.staff-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
+    grid-template-areas:
+    "staff-title staff-title staff-title staff-title"
+    "staff-picture-1 staff-description-1 staff-picture-2 staff-description-2"
+    "staff-picture-3 staff-description-3 staff-picture-4 staff-description-4"
+    "staff-picture-5 staff-description-5 staff-picture-6 staff-description-6"
+    "staff-picture-7 staff-description-7 staff-picture-8 staff-description-8"
+    "footer footer footer footer";
+    animation: transitionIn 1.00s;
+}
+.staff-title {
+    grid-area: staff-title;
+    color: white;
+    text-align: center;
+    position: relative;
+    background: no-repeat center center fixed;
+    background-size: 100%;
+    padding: 110px;
+}
+
+.staff-title h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.staff-picture-1 {
+    grid-area: staff-picture-1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.staff-picture-2 {
+    grid-area: staff-picture-2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.staff-picture-3 {
+    grid-area: staff-picture-3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.staff-picture-4 {
+    grid-area: staff-picture-4;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.staff-picture-5 {
+    grid-area: staff-picture-5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.staff-picture-6 {
+    grid-area: staff-picture-6;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.staff-picture-7 {
+    grid-area: staff-picture-7;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.staff-picture-8 {
+    grid-area: staff-picture-8;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.staff-container h2 {
+    text-align: center;
+ }
+
+.staff-container h3 {
+    font-size: 20px;
+    text-align: center;
+ }
+
+.staff-description-1 {
+    grid-area: staff-description-1;
+    padding: 50px;
+}
+
+.staff-description-2 {
+    grid-area: staff-description-2;
+    padding: 50px;
+}
+
+.staff-description-3 {
+    grid-area: staff-description-3;
+    padding: 50px;
+}
+
+.staff-description-4 {
+    grid-area: staff-description-4;
+    padding: 50px;
+}
+
+.staff-description-5 {
+    grid-area: staff-description-5;
+    padding: 50px;
+}
+
+.staff-description-6 {
+    grid-area: staff-description-6;
+    padding: 50px;
+}
+
+.staff-description-7 {
+    grid-area: staff-description-7;
+    padding: 50px;
+}
+
+.staff-description-8 {
+    grid-area: staff-description-8;
+    padding: 50px;
+}
+
+.staff-picture-1 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.staff-picture-2 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.staff-picture-3 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.staff-picture-4 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.staff-picture-5 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.staff-picture-6 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.staff-picture-7 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.staff-picture-8 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+/* Doulos styles */
+.doulos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    grid-template-areas:
+    "doulos-title doulos-title doulos-title doulos-title"
+    "doulos-picture-1 doulos-description-1 doulos-picture-2 doulos-description-2"
+    "doulos-picture-3 doulos-description-3 doulos-picture-4 doulos-description-4"
+    "doulos-picture-5 doulos-description-5 doulos-picture-6 doulos-description-6"
+    "footer footer footer footer";
+    animation: transitionIn 1.00s;
+}
+
+.doulos-title {
+    grid-area: doulos-title;
+    color: white;
+    text-align: center;
+    position: relative;
+    background: no-repeat center center fixed;
+    background-size: 100%;
+    padding: 110px;
+}
+
+.doulos-title h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.doulos-container h2 {
+    text-align: center;
+ }
+
+.doulos-container h3 {
+    font-size: 20px;
+    text-align: center;
+ } 
+
+.doulos-picture-1 {
+    grid-area: doulos-picture-1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.doulos-picture-2 {
+    grid-area: doulos-picture-2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.doulos-picture-3 {
+    grid-area: doulos-picture-3;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.doulos-picture-4 {
+    grid-area: doulos-picture-4;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.doulos-picture-5 {
+    grid-area: doulos-picture-5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.doulos-picture-6 {
+    grid-area: doulos-picture-6;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.doulos-description-1 {
+    grid-area: doulos-description-1;
+    padding: 50px;
+}
+
+.doulos-description-2 {
+    grid-area: doulos-description-2;
+    padding: 50px;
+}
+
+.doulos-description-3 {
+    grid-area: doulos-description-3;
+    padding: 50px;
+}
+
+.doulos-description-4 {
+    grid-area: doulos-description-4;
+    padding: 50px;
+}
+
+.doulos-description-5 {
+    grid-area: doulos-description-5;
+    padding: 50px;
+}
+
+.doulos-description-6 {
+    grid-area: doulos-description-6;
+    padding: 50px;
+}
+
+.doulos-picture-1 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.doulos-picture-2 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.doulos-picture-3 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.doulos-picture-4 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.doulos-picture-5 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.doulos-picture-6 img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+/* Contact styles */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "contact-title contact-title contact-title"
+    "contact-map form-response contact-form"
+    "footer footer footer";
+    animation: transitionIn 1.00s;
+}
+
+.contact-title {
+    grid-area: contact-title;
+    color: white;
+    text-align: center;
+    position: relative;
+    background: no-repeat center center fixed;
+    background-size: 100%;
+    padding: 110px;
+}
+
+.contact-title h1 {
+    font-size: 60px;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.contact-map {
+    grid-area: contact-map;
+    margin: 20px;
+}
+
+.contact-form {
+    grid-area: contact-form;
+}
+
+.contact-map iframe {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+}
+
+.contact-map-title {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.contact-form-title {
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+.contact-form-info {
+    margin: 25px;
+}
+
+.contact-form-info label {
+    font-family: 'Lato', serif;
+}
+
+.contact-form-btn .btn {
+    border: 1px solid black;
+}
+
+.form-response {
+    grid-area: form-response;
+    text-align: center;
+    font-family: 'Lato', serif;
+    text-transform: uppercase;
+}
+
+/* Footer styles */
+.footer {
+    grid-area: footer;
+    background-color: lightgrey;
+    padding: 30px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+}
+
+.icon {
+    margin: 0 15px 5px 0;
+}
+
+.icon:last-child {
+    margin-right: 0;
+}
+
+.attribute {
+    color: lightgrey;
+    font-size: 1px;
+}
+
+/*
+.burger{
+    display: none
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: #000000;
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px){
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+*/

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static '/css/style.css' %}">
+</head>
+
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+</style>
+<body>
+    <div class="doulos-container">
+        <div class="doulos-title" style="background-image: url({% static 'images/doulos.jpg' %});">
+            <h1>Doulos Team</h1>
+        </div>
+
+        <div class="doulos-picture-1">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="doulos-description-1">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="doulos-picture-2">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="doulos-description-2">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="doulos-picture-3">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="doulos-description-3">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="doulos-picture-4">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="doulos-description-4">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="doulos-picture-5">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="doulos-description-5">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="doulos-picture-6">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="doulos-description-6">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

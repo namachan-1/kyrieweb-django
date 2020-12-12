@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static '/css/style.css' %}">
+</head>
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+</style>
+<body>
+    <div class="home-container">
+        <div class="header" style="background-image: url({% static 'images/homepage.jpg' %});">
+                <h1 class="titleone" id="title">Praise God from whom all blessings flow</h1>
+            <br>
+            <p>Galatians 2:20 - "I have been crucified with Christ. It is no longer I who live, 
+            but Christ who lives in me. And the life I now live in the flesh I live by faith in
+            the Son of God, who loved me and gave himself for me."
+            </p>
+        </div>
+        <div class="about-container" style="background-image: url({% static 'images/homepage2.jpg' %});">
+            <div class="home-about-who">
+                <div class="about-title">
+                    <h2>Who We Are</h2>
+                </div>
+                <div class="about-content">
+                    <p>Kyrie (keer-ee-ey) Christian Fellowship. The name of our fellowship comes from 
+                    the Greek word Kyrie, meaning Lord. It is what we are all about, and why we are here. 
+                    We are an on-campus Christian Fellowship supported by two churches,
+                    Trinity Bible Church and Redeemer Anglican Church, seeking to connect students
+                    to the local church and to be a light to our community. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-container" style="background-image: url({% static 'images/homepage3.jpg' %});">  
+            <div class="home-about-where">
+                <div class="about-title">
+                    <h2>Our Vision</h2>
+                </div>
+                <div class="about-content">
+                    <p>Our vision is to evangelize, disciple, and train college students at UC Santa Cruz through
+                    active participation in and engagement with the local church. We hope to further the kingdom 
+                    of God by raising up men and women of God.
+                    </p>
+                    <br><br><br>
+                </div>
+            </div> 
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="{% static '/js/app.js' %}"></script>
+</body>
+{% endblock %}
+</html>

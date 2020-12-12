@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static '/css/style.css' %}">
+</head>
+
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+</style>
+<body>
+    <div class="event-container">
+        <div class="event-title" style="background-image: url({% static 'images/event.jpg' %});">
+            <h1>Events</h1>
+        </div>
+        <div class="event-calendar">
+        <br><br>
+            <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=a3lyaWV1Y3NjQGdtYWlsLmNvbQ&amp;src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%238E24AA&amp;color=%239E69AF&amp;color=%233F51B5" style="border:solid 2px black" width="1400" height="900" frameborder="0" scrolling="no"></iframe>
+        <br><br>
+        </div>
+        <div class="content-title">
+            <h2>Upcoming Events</h2>
+            <br>
+        </div>
+        <div class="event-content-1">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">OPERS FEST</h5>
+                    <h6 class="card-subtitle">Date: 9/24</h6>
+                    <p class="card-text">OPERS FEST is where 250 clubs on campus will 
+                        be have booths to display what they are all about! Stop by the Kyrie 
+                        Christian Fellowship booth to say hi and to learn more about what 
+                        we are all about!:)</p>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-content-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Welcome BBQ</h5>
+                    <h6 class="card-subtitle">Date: 9/26</h6>
+                    <p class="card-text">We will have free bbq and fun games to play so feel free to come and 
+                        fellowship with us! The event will be at Garfield Park from 12pm-4pm. Please 
+                        sign up on Facebook or our website form (here) so we can get a head count. Hope to see
+                        you all there!</p>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-content-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">First Kyrie Large Group</h5>
+                    <h6 class="card-subtitle">Date: 9/30</h6>
+                    <p class="card-text">This will be our first large group of the year and we will be starting 
+                        at 8pm! This will take place on campus in Thimann 1. Feel free to contact any 
+                        of our Doulos team for directions. Can't wait to worship our Lord together in spirit and 
+                        truth.</p>
+                    <a href="#" class="btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

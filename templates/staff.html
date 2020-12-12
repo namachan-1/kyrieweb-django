@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static '/css/style.css' %}">
+</head>
+
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+</style>
+<body>
+    <div class="staff-container">
+        <div class="staff-title" style="background-image: url({% static 'images/staff.jpg' %});">
+            <h1>Our Staff</h1>
+        </div>
+
+        <div class="staff-picture-1">
+            <img src="{% static 'images/staff_1.jpg' %}">
+        </div>
+        <div class="staff-description-1">
+            <h2>In Honor of</h2>
+            <h2>Lynne McDonnell</h2>
+            <br>
+            <h3>Staff/Grandma/Friend</h3>
+        </div>
+
+        <div class="staff-picture-2">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="staff-description-2">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="staff-picture-3">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="staff-description-3">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="staff-picture-4">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="staff-description-4">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="staff-picture-5">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="staff-description-5">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="staff-picture-6">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="staff-description-6">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="staff-picture-7">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="staff-description-7">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+
+        <div class="staff-picture-8">
+            <img src="{% static 'images/staff-2.JPG' %}">
+        </div>
+        <div class="staff-description-8">
+            <h2>Name</h2>
+            <br>
+            <h3>Role</h3>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

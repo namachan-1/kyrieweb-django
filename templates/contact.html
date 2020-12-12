@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static '/css/style.css' %}">
+</head>
+
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+</style>
+<body>
+    <div class="contact-container">
+        <div class="contact-title" style="background-image: url({% static 'images/contact.jpg' %});">
+            <h1>Contact Us</h1>
+        </div>
+        {% if first_name %}
+            <div class="form-response">
+                <br><br>
+                <h2>Thanks {{ first_name }}!</h2>
+                <p>We received your email and will respond shortly...</p>
+                <br><br>
+            </div>
+        {% else %}
+        <div class="contact-map">
+            <br>
+            <div class="contact-map-title">
+                <h2>Location</h2>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3186.492627360536!2d-122.06353514841418!3d36.99804236413771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e419ff9e34357%3A0x51cd68eb9da489ec!2sThimann%20Lecture!5e0!3m2!1sen!2sus!4v1599013099960!5m2!1sen!2sus"></iframe>
+            <br><br>
+        </div>
+
+        <div class="contact-form"> 
+            <div class="contact-form-title">
+                <br><br>
+                <h2>Get In Touch</h2>
+            </div>
+            <div class="contact-form-info">
+                <!-- Allows form to revert back to itself -->
+                <form action="{% url 'contact' %}" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="first-name" class="form-control" id="fname" placeholder="John">
+                    </div>
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="last-name" class="form-control" id="lname" placeholder="Lee">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" name="status" id="status">
+                            <option>Freshman</option>
+                            <option>Sophomore</option>
+                            <option>Junior</option>
+                            <option>Senior</option>
+                            <option>5th Year or higher</option>
+                            <option>Not A Student</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="questions">Questions/Concerns</label>
+                        <textarea class="form-control" name="message" id="questions" placeholder="Type Message" rows="3"></textarea>
+                    </div>
+
+                    <div class="contact-form-btn">
+                        <button type="submit" class="btn">Submit</button>
+                    </div>
+                </form>
+                <br><br><br><br><br>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

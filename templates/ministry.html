@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static '/css/style.css' %}">
+</head>
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+</style>
+<body>
+    <div class="ministry-container">
+        <div class="ministry-title" style="background-image: url({% static 'images/ministry.jpg' %});">
+            <h1>Ministries</h1>
+        </div>
+        <div class="gallery">
+                <img src="{% static 'images/ministry-10.JPG' %}">
+                <img src="{% static 'images/ministry-7.JPG' %}">
+                <img src="{% static 'images/ministry-6.JPG' %}">
+                <img src="{% static 'images/ministry-9.JPG' %}">
+                <img src="{% static 'images/ministry-5.JPG' %}">
+                <img src="{% static 'images/ministry-12.jpg' %}">
+                <img src="{% static 'images/ministry-2.JPG' %}">
+                <img src="{% static 'images/ministry-8.JPG' %}">
+                <img src="{% static 'images/ministry-11.JPG' %}">
+                <img src="{% static 'images/ministry-3.jpg' %}">
+                <img src="{% static 'images/ministry-4.JPG' %}">
+            <br><br>
+        </div>
+        <div class="ministries">
+            <div class="ministry-1-title">
+                <h2 class="display-4">Men's Bible Studies</h2>
+                <hr class="my-5">
+                <div class="ministry-p">
+                    <p>
+                    Come join us in learning about how we can be better men of God
+                    through His Word and fellowship.
+                    </p>
+                </div>
+                <br>
+                <a class="btn" href="https://docs.google.com/forms/d/1FfZ9qrI7NtYM9XIKrG01KDMlNV3fwPmjuX84O-EEE48/edit" role="button">Sign up</a>
+            </div>
+
+            <div class="ministry-info-1">
+            <br><br>
+                <h3>Bible Study</h3>
+                <p>Date: TBD</p>
+                <p>Location: TBD</p>
+            <br><br>
+            </div>
+
+            <div class="ministry-2-title">
+                <h2 class="display-4">Women's Bible Studies</h2>
+                <hr class="my-5">
+                <div class="ministry-p">
+                    <p>
+                    Come join us in learning about how we can be better women of God
+                    through His Word and fellowship.
+                    </p>
+                </div>
+                <br>
+                <a class="btn" href="https://docs.google.com/forms/d/1IVbqXlWG4Td9x1_oc14teUFru64Cp4oIdxkuvBmNOGY/edit" role="button">Sign up</a>
+            </div>
+
+            <div class="ministry-info-2">
+            <br><br>
+                <h3>Bible Study</h3>
+                <p>Date: TBD</p>
+                <p>Location: TBD</p>
+            <br><br>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

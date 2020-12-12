@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% extends 'base.html' %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static '/css/style.css' %}">
+</head>
+{% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans&display=swap');
+</style>
+<body>
+    <div class="church-container">
+        <div class="church-title" style="background-image: url({% static 'images/church.jpg' %});">
+            <h1>Churches</h1>
+        </div>
+        <div class="line-break">
+            <br><br><br>
+        </div>
+        <div class="jumbotron-1">
+            <h1 class="display-4">Trinity Bible Church</h1>
+            <hr class="my-5">
+            <p>A Reformed-Baptist Church located in Felton, California committed
+            to serving its community
+            </p>
+            <br>
+            <a class="btn" href="https://www.tb-church.org/" role="button">Learn more</a>
+        </div>
+        <div class="church-info-1">
+            <br><br>
+            <h2>Sunday Service</h2>
+            <br>
+                <p>Sunday School: 9:30 am</p>
+                <p>Service: 10:30 am</p>
+            <br>
+        </div>
+        <div class="church-info-3">
+            <br><br>
+            <h2>Bible Studies</h2>
+            <br>
+                <p>Monday Night: 7:00pm</p>
+                <p>Tuesday Morning Ladies' Study: Will Resume soon.</p>
+                <p>Saturday Ladies' Study in James: 10:00am</p>
+            <br>
+        </div>
+
+        <div class="jumbotron-2">
+            <h1 class="display-4">Redeemer Anglican Church</h1>
+            <hr class="my-5">
+            <p>An Anglican Church located in Soquel, California focused on the importance
+            God's redemptive work through His Son Jesus Christ
+            </p>
+            <br>
+            <a class="btn" href="https://redeemeranglican.com/" role="button">Learn more</a>
+        </div>
+        <div class="church-info-2">
+            <br><br>
+            <h2>Sunday Service</h2>
+            <br>
+                <p>Sunday Morning Prayer: 10:30am</p>
+            <br>
+        </div>
+        <div class="church-info-4">
+            <br><br>
+            <h2>Weekly Gatherings</h2>
+            <br>
+                <p>Sunday Youth Group: 7:30 pm</p>
+                <p>Tuesday Small Group: 7:00 pm</p>
+            <br>
+        </div>
+    </div>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    {% load static %}
+    <link rel='stylesheet' type="text/css" href="{% static '/css/style.css' %}">
+</head>
+<body>
+<!--All links to website pages-->
+    <div class="nav-wrapper">
+        <div class="nav-logo">
+            <img src="{% static 'images/kyrie_logo.png' %}" style="width:125px;height:46px" alt="Kyrie logo">
+        </div>
+        <div class="center-nav" id="navcontainer"> 
+            <div class="nav-link-wrapper">
+                <a class="page" href="https://kyrieucsc.herokuapp.com/home/">Home</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a class="page" href="https://kyrieucsc.herokuapp.com/home/churches">Churches</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a class="page" href="https://kyrieucsc.herokuapp.com/home/ministries">Ministries</a>
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a class="page" href="https://kyrieucsc.herokuapp.com/home/events">Events</a>
+            </div>
+
+            <div class="nav-dropdown-link-wrapper">
+                <div class="nav-dropdown">
+                    <a href="#">Leaders</a>
+                    <div class="nav-dropdown-links">
+                            <a class="page" href="https://kyrieucsc.herokuapp.com/home/leaders/staff">Staff</a>
+                    </div>
+                    <div class="nav-dropdown-links">
+                        <a class="page" href="https://kyrieucsc.herokuapp.com/home/leaders/doulos">Doulos</a>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="nav-link-wrapper">
+                <a class="page" href="https://kyrieucsc.herokuapp.com/home/contact">Contact</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+    /*
+        // Get the container element
+        var pageContainer = document.getElementById("navcontainer");
+
+        // Get all buttons with class="links" inside the container
+        var page = pageContainer.getElementsByClassName("page");
+
+        // Loop through the links and add the active class to the current/clicked button
+        for (var i = 0; i < page.length; i++) {
+        page[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+            });
+        }
+    */
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('a');
+        const menuLength = menuItem.length;
+        for (let i = 0; i<menuLength; i++){
+            if (menuItem[i].href === currentLocation){
+                menuItem[i].className = "active"
+            }
+        }
+    </script>
+</body>
+</html>
